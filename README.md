@@ -1,5 +1,7 @@
 # Clarifo MCP server: SEC filings and Nordic financial data for Claude, ChatGPT and Cursor
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/chasingnordics-clarifo-mcp-eisiss?v=cc402ccaf28b9c43a8761f64d2659822)](https://m8ven.ai/mcp/chasingnordics-clarifo-mcp-eisiss?s=readme)
+
 Clarifo is a financial research platform for US and Nordic listed companies.
 Its hosted, read-only MCP server lets AI assistants search company filings,
 pull financial statements, compare and screen companies, and cite every

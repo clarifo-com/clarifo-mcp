@@ -5,10 +5,10 @@
   "description": "Source-cited financial research on US and Nordic company filings.",
   "websiteUrl": "https://www.clarifo.com/docs/mcp",
   "repository": {
-    "url": "https://github.com/ChasingNordics/clarifo-mcp",
+    "url": "https://github.com/clarifo-com/clarifo-mcp",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.2.1",
   "remotes": [
     {
       "type": "streamable-http",

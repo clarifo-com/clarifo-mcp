@@ -3,9 +3,10 @@
 [![M8ven Score](https://m8ven.ai/badge/mcp/chasingnordics-clarifo-mcp-eisiss?v=cc402ccaf28b9c43a8761f64d2659822)](https://m8ven.ai/mcp/chasingnordics-clarifo-mcp-eisiss?s=readme)
 
 Clarifo is a financial research platform for US and Nordic listed companies.
-Its hosted, read-only MCP server lets AI assistants search company filings,
-pull financial statements, compare and screen companies, and cite every
-figure back to the page of the report it came from.
+Its hosted MCP server lets AI assistants search company filings, pull
+financial statements, compare and screen companies, and cite every figure
+back to the page of the report it came from. With your permission, the
+assistant can also keep the work in your Clarifo account.
 
 - **Data:** SEC filings (10-K, 10-Q, 8-K) and Nordic annual and interim
   reports (ESEF), with financial statements and key figures over multiple
@@ -13,7 +14,15 @@ figure back to the page of the report it came from.
 - **Citations:** every read tool returns page ids that resolve to the source
   page (a rendered report page for Nordic filings, an SEC EDGAR link for US
   filings).
-- **Read-only:** no tool creates, edits or deletes data.
+- **In the chat:** in ChatGPT and Claude, results come as views: charts,
+  Visual Story cards, the cited source page, a document preview and the
+  Clarifo panel (your portfolios and documents).
+- **Your workspace, opt-in:** company and filing data is read-only. Writing
+  to your own account (saving documents and notes, editing or publishing a
+  document, Automate, portfolio positions) is off until you turn it on in
+  Clarifo under Settings > Integrations, and happens only when you ask.
+  Edits, publishing and new automations need your approval in the chat, and
+  nothing is deleted for good.
 
 Full documentation, the tool list, plans and limits:
 **https://www.clarifo.com/docs/mcp**

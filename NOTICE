@@ -1,0 +1,33 @@
+Clarifo Developer Hub
+Copyright (c) 2026 Clarifo
+
+This repository is licensed in two parts:
+
+  - Code (everything under examples/, integrations/, plugins/, scripts/ and
+    .github/, plus code blocks anywhere in the repository) is licensed under
+    the MIT License. See LICENSE.
+
+  - Documentation (Markdown prose under cookbook/, docs/ and the README files)
+    is licensed under the Creative Commons Attribution 4.0 International
+    License (CC BY 4.0). See LICENSE-docs. Attribute as:
+    "Clarifo Developer Hub, https://github.com/clarifo-com/clarifo-mcp".
+
+NOT COVERED BY EITHER LICENSE
+
+Neither license grants any right to the following, which remain the property
+of Clarifo and its licensors:
+
+  1. The hosted Clarifo MCP service at https://mcp.clarifo.com and the
+     Clarifo Data API. Access is governed by the Clarifo Terms of Service.
+  2. The server source code, which is not published in this repository.
+  3. Financial data, filing texts, prices, scores and any other content
+     returned by the Clarifo service, including any such content that appears
+     as an example response in this repository. Example responses are
+     included for illustration only and may not be redistributed as data.
+  4. The Clarifo name, logo and other brand features. You may use the name
+     "Clarifo" to state truthfully that your software works with the Clarifo
+     service. You may not use it in a way that suggests endorsement or
+     affiliation, or as part of the name of your product.
+
+Third-party names (Claude, ChatGPT, Cursor, OpenAI, LangGraph, n8n, Vercel
+and others) are trademarks of their respective owners.

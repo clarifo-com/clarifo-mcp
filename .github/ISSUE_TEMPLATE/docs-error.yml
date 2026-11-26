@@ -1,0 +1,17 @@
+name: Documentation error
+description: A recipe, guide or reference page is wrong or unclear.
+labels: ["docs"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: cookbook/earnings/quarterly-earnings-review.md
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true

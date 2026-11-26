@@ -1,0 +1,17 @@
+{
+  "name": "clarifo-vercel-ai-sdk-example",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "agent": "node agent.mjs"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.110",
+    "@ai-sdk/mcp": "^2.0.106",
+    "ai": "^7.0.183"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

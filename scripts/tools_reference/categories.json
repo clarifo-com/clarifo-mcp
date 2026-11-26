@@ -1,0 +1,60 @@
+{
+  "_comment": "Groups tools on the reference index page. Only names are kept here: descriptions, parameters and annotations always come from the production server. A tool missing from this file is listed under 'Other' and flagged in CHANGES.md.",
+  "categories": [
+    {
+      "id": "company",
+      "title": "Company lookup and research",
+      "tools": ["get_company_snapshot", "research_company", "resolve_entities", "discover_companies", "get_sector_peer_set", "dd_quickscan", "get_company_profile"]
+    },
+    {
+      "id": "filings",
+      "title": "Filings and cited sources",
+      "tools": ["search_filings", "search_filing_content", "get_filing_snapshot", "fetch_edgar_filing_on_demand", "document_summary", "reporting_change"]
+    },
+    {
+      "id": "financials",
+      "title": "Financials",
+      "tools": ["get_company_financials", "get_financial_statement", "compare_companies", "get_revenue_geography", "get_segment_financials", "screen_segments"]
+    },
+    {
+      "id": "screening",
+      "title": "Screening",
+      "tools": ["screen_companies", "screen_companies_multi", "screen_quality_growers", "screen_metric_trend"]
+    },
+    {
+      "id": "valuation",
+      "title": "Trends, forecasts, valuation and prices",
+      "tools": ["detect_inflection_points", "forecast_financials", "value_company", "get_valuation_history", "get_industry_valuation_benchmark", "get_stock_price"]
+    },
+    {
+      "id": "ownership",
+      "title": "US ownership, insiders, governance and events",
+      "tools": ["ownership", "insider_activity", "governance", "company_events"]
+    },
+    {
+      "id": "narrative",
+      "title": "Reporting standards and intelligence",
+      "tools": ["answer_reporting_standards", "intelligence"]
+    },
+    {
+      "id": "ceo",
+      "title": "CEO Barometer",
+      "tools": ["get_ceo_barometer", "score_ceo_sentiment_for_company"]
+    },
+    {
+      "id": "output",
+      "title": "Charts, cards and views",
+      "tools": ["render_chart", "generate_visual_cards", "get_visual_cards_guide", "open_in_clarifo"]
+    },
+    {
+      "id": "workspace",
+      "title": "Your workspace (read)",
+      "tools": ["list_workspace_items", "get_workspace_item", "portfolios", "notes", "automations"]
+    },
+    {
+      "id": "workspace_write",
+      "title": "Your workspace (write, opt-in)",
+      "tools": ["save_to_workspace", "save_note", "preview_document_update", "apply_document_update", "create_automation_draft", "activate_automation", "update_automation", "move_to_trash", "restore_from_trash"]
+    }
+  ]
+}

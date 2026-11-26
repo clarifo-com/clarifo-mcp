@@ -1,0 +1,60 @@
+name: Tools reference
+
+# Regenerates docs/tools/ from the production MCP server and opens a pull
+# request when the tool surface changed. Runs only on schedule or by hand,
+# never on pull requests, so the API key is not exposed to forked code.
+on:
+  schedule:
+    - cron: "17 5 * * 1"   # Mondays 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: tools-reference
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    # Holds the CLARIFO_API_KEY secret. Use a dedicated read-only service
+    # account whose workspace writes are turned off.
+    environment: tools-reference
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/tools_reference/requirements.txt
+      - name: Fetch schema and render pages
+        env:
+          CLARIFO_API_KEY: ${{ secrets.CLARIFO_API_KEY }}
+        run: python scripts/tools_reference/generate.py fetch render
+      - name: Ignore snapshot-time-only changes
+        id: diff
+        run: |
+          git add -A docs/tools
+          if git diff --cached --quiet -I '"fetched_at"' -I 'Snapshot taken' -- docs/tools; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open pull request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/tools-reference
+          title: "docs(tools): update reference from production schema"
+          commit-message: "docs(tools): update reference from production schema"
+          body: |
+            The production MCP schema changed. See `docs/tools/CHANGES.md` for
+            the detected changes. Before merging:
+            - add a human summary to `CHANGELOG.md`;
+            - add new tools to `scripts/tools_reference/categories.json`;
+            - check that recipes, agents and skills still use valid parameters.
+          add-paths: docs/tools
+          delete-branch: true

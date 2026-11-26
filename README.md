@@ -24,11 +24,17 @@ assistant can also keep the work in your Clarifo account.
   Edits, publishing and new automations need your approval in the chat, and
   nothing is deleted for good.
 
-Full documentation, the tool list, plans and limits:
-**https://www.clarifo.com/docs/mcp**
+## Developer Hub
 
-> This repository holds the listing metadata and setup instructions for the
-> hosted service. It is not the server's source code and is not open source.
+| | |
+|---|---|
+| [**Cookbook**](cookbook/) | Recipes with prompts, tool flows and pitfalls: earnings reviews, peer comparisons, risk-factor changes, IFRS policies, pre-DD scans, monitoring, screening. |
+| [**Tools reference**](docs/tools/) | Every tool with parameters and behaviour, generated weekly from the production MCP schema. [Client differences](docs/tools/clients.md). |
+| [**Claude Code plugin**](plugins/clarifo/) | The MCP connection plus investment, financial-analysis, competitor and market-monitoring agents and three skills, in one install. |
+| [**Integrations**](integrations/) | Templates for the Claude Agent SDK, OpenAI Agents SDK, LangGraph, Vercel AI SDK, Cursor and n8n. |
+| [**Changelog**](CHANGELOG.md) | Service and repository versions. |
+
+Questions and ideas go to [Discussions](https://github.com/clarifo-com/clarifo-mcp/discussions).
 
 ## Endpoint
 
@@ -61,6 +67,14 @@ under **Organization settings > Connectors**, and members then click
 **Connect**.
 
 ### Claude Code
+
+Install the plugin to get the connection, agents and skills together:
+
+```text
+/plugin install clarifo --marketplace clarifo-com/clarifo-mcp
+```
+
+Or add only the MCP server:
 
 ```bash
 claude mcp add --transport http --scope user clarifo https://mcp.clarifo.com/mcp
@@ -119,11 +133,22 @@ your browser.
 
 ## Support and security
 
-Questions and security reports: [support@clarifo.com](mailto:support@clarifo.com).
-Please do not open issues here; this repository does not track them.
+- Questions, ideas and show-and-tell: [Discussions](https://github.com/clarifo-com/clarifo-mcp/discussions).
+- Bugs in the examples or templates in this repository: [Issues](https://github.com/clarifo-com/clarifo-mcp/issues/new/choose).
+- Data, account and service problems: [support@clarifo.com](mailto:support@clarifo.com).
+- Security reports: see [SECURITY.md](SECURITY.md); never in a public issue.
+
+## License
+
+Code in this repository is MIT-licensed ([LICENSE](LICENSE)) and
+documentation is CC BY 4.0 ([LICENSE-docs](LICENSE-docs)). The hosted Clarifo
+service, the server source code (not published here), financial data
+returned by the service and the Clarifo brand are not covered by either
+license; see [NOTICE](NOTICE).
 
 ## Links
 
+- Full documentation, plans and limits: https://www.clarifo.com/docs/mcp
 - Product: https://www.clarifo.com/product/features
 - MCP documentation: https://www.clarifo.com/docs/mcp
 - Pricing: https://www.clarifo.com/pricing

@@ -1,0 +1,21 @@
+---
+description: Use when the task needs company financials, SEC or Nordic filings, peer comparisons, valuation or corporate events from the Clarifo MCP server.
+alwaysApply: false
+---
+
+# Working with Clarifo data
+
+- Clarifo covers US (NYSE, NASDAQ) and Nordic (Helsinki, Stockholm,
+  Copenhagen) listed companies. Answer from Clarifo tools before the web.
+- Keep the `citation_markdown` link next to every figure you put in code
+  comments, notebooks, reports or fixtures.
+- Quote growth rates and ratios as the tools return them (`changes`,
+  `yoy`, `basis`); do not recompute them in prose.
+- State the period (`period_end`) and currency of every figure.
+- When you write code that calls Clarifo, read the key from the
+  `CLARIFO_API_KEY` environment variable. Never hard-code it.
+- Do not paste Clarifo responses into committed test fixtures or public
+  repositories: the data is licensed for your use, not for redistribution.
+- Workspace write tools (`save_note`, `save_to_workspace`,
+  `apply_document_update`, automations, trash) change the user's Clarifo
+  account. Only call them when the user asks.

@@ -1,0 +1,32 @@
+# Clarifo MCP
+
+> Clarifo is a financial research platform for US (NYSE, NASDAQ) and Nordic (Helsinki, Stockholm, Copenhagen) listed companies. Its hosted MCP server at https://mcp.clarifo.com/mcp lets AI assistants search SEC filings and Nordic annual and interim reports, pull financial statements, compare and screen companies, and cite every figure to the page of the report it came from.
+
+Connect from Claude (Connectors Directory), ChatGPT (apps directory), Claude Code (`claude mcp add --transport http clarifo https://mcp.clarifo.com/mcp`), Cursor or any MCP client. Sign-in is OAuth 2.1; headless clients use a Clarifo Data API key as a bearer token. Company and filing data is read-only; writing to the user's own Clarifo workspace is opt-in.
+
+## Docs
+
+- [README and setup](https://github.com/clarifo-com/clarifo-mcp/blob/main/README.md): endpoint, authentication, client setup
+- [Tools reference](https://github.com/clarifo-com/clarifo-mcp/blob/main/docs/tools/README.md): every tool, its parameters and behaviour, generated from the production schema
+- [Client differences](https://github.com/clarifo-com/clarifo-mcp/blob/main/docs/tools/clients.md): Claude, ChatGPT, Claude Code, Cursor, SDKs, n8n
+- [Official documentation](https://www.clarifo.com/docs/mcp): plans, limits, full product docs
+
+## Cookbook
+
+- [Quarterly earnings review](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/earnings/quarterly-earnings-review.md): latest quarter vs the same quarter last year, guidance, one-offs, with citations
+- [Compare peers like for like](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/comparison/compare-peers-like-for-like.md): LTM and currency-converted comparisons of up to five companies
+- [10-K risk factor changes](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/risk/10-k-risk-factor-changes.md): risk factors added, removed and edited between filings
+- [IFRS 16 leases in Nordic reports](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/accounting/ifrs-16-leases-nordic.md): compare accounting policy notes with page citations
+- [Pre-DD red-flag scan](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/due-diligence/pre-dd-red-flag-scan.md): evidence pack from public filings before due diligence
+- [Weekly watchlist digest](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/monitoring/weekly-watchlist-digest.md): reports, material events and report dates
+- [Quality growers screen](https://github.com/clarifo-com/clarifo-mcp/blob/main/cookbook/screening/quality-growers.md): revenue growth with improving margins and positive cash flow
+
+## Agents and integrations
+
+- [Claude Code plugin](https://github.com/clarifo-com/clarifo-mcp/tree/main/plugins/clarifo): investment, financial analysis, competitor and market-monitoring agents; earnings review, peer comparison and pre-DD skills
+- [Integration templates](https://github.com/clarifo-com/clarifo-mcp/tree/main/integrations): Claude Agent SDK, OpenAI Agents SDK, LangGraph, Vercel AI SDK, Cursor, n8n
+
+## Optional
+
+- [Changelog](https://github.com/clarifo-com/clarifo-mcp/blob/main/CHANGELOG.md)
+- [Licensing](https://github.com/clarifo-com/clarifo-mcp/blob/main/NOTICE): code MIT, docs CC BY 4.0; the hosted service, server code, financial data and brand are not licensed

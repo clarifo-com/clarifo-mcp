@@ -13,6 +13,19 @@ tools. Each folder runs on its own; copy it into your project.
 | [`n8n`](n8n/) | n8n | No code | API key |
 | [Claude Code plugin](../plugins/clarifo/) | Claude Code | Plugin | OAuth |
 
+## Requirements
+
+- **Interactive clients** (the Claude Code plugin, Cursor) sign in with
+  OAuth and work on every plan with MCP access: Standard, Pro, Team and
+  Enterprise.
+- **Code and automation** (the SDK templates and n8n) authenticate with a
+  Clarifo API key (`clf_live_…` or `clf_test_…`), created in Clarifo under
+  **Settings > API keys**. API keys come with **Pro, Team and Enterprise**
+  plans and the 7-day Pro trial; Standard does not include them. See
+  [Authentication](https://www.clarifo.com/docs/authentication).
+- Fair-use caps and the burst limit are listed under
+  "Plans & limits" in the [MCP documentation](https://www.clarifo.com/docs/mcp).
+
 ## Shared design
 
 - **One copy of the agent instructions.** The SDK templates read the system

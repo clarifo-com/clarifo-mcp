@@ -9,7 +9,9 @@ for n8n 1.x; node and field names can differ slightly between versions.
 1. In n8n go to **Credentials > Add credential > Bearer Auth** (some
    versions call it Header Auth; then use the header name `Authorization`
    and the value `Bearer <key>`).
-2. Paste your Clarifo Data API key. Use a key dedicated to n8n.
+2. Paste a Clarifo API key (`clf_live_…`), created in Clarifo under
+   **Settings > API keys** (Pro, Team or Enterprise plan). Use a key
+   dedicated to n8n, without write permission.
 
 ## 2. Workflow
 

@@ -12,6 +12,9 @@ export CLARIFO_API_KEY=... OPENAI_API_KEY=...
 python agent.py --agent investment-analyst "Write an investment brief on Kone"
 ```
 
+Get the key in Clarifo under **Settings > API keys** (Pro, Team or
+Enterprise plan, or the 7-day Pro trial). A `clf_test_` key is a good start.
+
 ## What the template does
 
 - Connects to `https://mcp.clarifo.com/mcp` over Streamable HTTP with the

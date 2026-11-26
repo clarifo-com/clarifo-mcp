@@ -11,8 +11,12 @@ impact you observed.
 
 - Never commit a Clarifo API key. Every example reads it from the
   `CLARIFO_API_KEY` environment variable; `.env` files are git-ignored.
-- Where your plan allows several keys, use a separate key per integration
-  so you can revoke one without affecting the others.
+- Use a separate key per integration (Settings > API keys allows up to five
+  active keys) so you can revoke one without affecting the others. Use a
+  `clf_test_` key while developing: it has its own monthly cap.
+- A key only writes to your workspace if both the key allows writing and
+  writes are turned on under Settings > Integrations. Create keys for
+  agents without write permission.
 - Workspace writes (documents, notes, portfolios, automations) are off by
   default for every connection. Leave them off for automated agents unless
   the agent needs them.

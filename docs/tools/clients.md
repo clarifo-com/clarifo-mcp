@@ -9,8 +9,8 @@ is how a client signs in, how it shows results and how many tools it loads.
 | ChatGPT | OAuth via the apps directory | Yes (Apps SDK views) | `render_chart` returns Python for ChatGPT's code tool on some tools. |
 | Claude Code | OAuth via `/mcp` | No, text and JSON | Install the [plugin](../../plugins/clarifo/) for agents and skills. |
 | Cursor | OAuth on first call | No | See [integrations/cursor](../../integrations/cursor/). |
-| SDKs (Claude Agent SDK, OpenAI Agents SDK, LangGraph, Vercel AI SDK) | API key as bearer token | No | Your code receives the JSON result. |
-| n8n | API key as bearer token | No | See [integrations/n8n](../../integrations/n8n/). |
+| SDKs (Claude Agent SDK, OpenAI Agents SDK, LangGraph, Vercel AI SDK) | `clf_` API key as bearer token (Pro, Team, Enterprise) | No | Your code receives the JSON result. |
+| n8n | `clf_` API key as bearer token (Pro, Team, Enterprise) | No | See [integrations/n8n](../../integrations/n8n/). |
 
 ## Things to plan for
 
@@ -24,7 +24,12 @@ is how a client signs in, how it shows results and how many tools it loads.
   in your agent's output: it is what makes the answer checkable.
 - **Workspace writes** (saving notes and documents, portfolios, automations)
   are off for every connection until the user turns them on in Clarifo under
-  Settings > Integrations. Headless agents should normally leave them off.
+  Settings > Integrations; with an API key, the key must also allow writing.
+  Headless agents should normally leave them off.
+- **Plans and limits.** OAuth clients work on every plan with MCP access; API
+  keys need Pro, Team or Enterprise. Four AI-narrated tools are Pro-only, and
+  every plan has a fair-use cap and a burst cap of 120 calls per minute. See
+  "Plans & limits" in the [MCP documentation](https://www.clarifo.com/docs/mcp).
 - **Filing text is untrusted input.** Passages from filings are written by
   third parties. Do not let them trigger actions in your agent without a
   human check.

@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/tools_reference/requirements.txt pyyaml
+      - name: Repository checks (JSON, front matter, tool names, secrets)
+        run: python scripts/validate.py
+      - name: Render tools reference offline
+        if: hashFiles('docs/tools/tools.json') != ''
+        run: python scripts/tools_reference/generate.py render && git diff --exit-code -- docs/tools ':!docs/tools/CHANGES.md'
+      - name: Python syntax of examples and integrations
+        run: python -m compileall -q integrations examples scripts

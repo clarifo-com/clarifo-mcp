@@ -1,0 +1,29 @@
+name: Bug in an example or integration
+description: Code in this repository does not work as documented.
+labels: ["bug", "examples"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for code in this repository only. Problems with data or the
+        hosted service go to support@clarifo.com. Never paste an API key.
+  - type: input
+    id: path
+    attributes:
+      label: File or folder
+      placeholder: integrations/langgraph/agent.py
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Versions
+      description: Language runtime and SDK versions (pip freeze / npm ls output for the relevant packages).
+    validations:
+      required: true

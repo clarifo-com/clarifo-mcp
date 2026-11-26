@@ -1,0 +1,20 @@
+{
+  "name": "clarifo",
+  "owner": {
+    "name": "Clarifo",
+    "email": "support@clarifo.com"
+  },
+  "metadata": {
+    "description": "Clarifo plugins for Claude Code: source-cited financial research on US and Nordic listed companies."
+  },
+  "plugins": [
+    {
+      "name": "clarifo",
+      "source": "./plugins/clarifo",
+      "description": "Connects the Clarifo MCP server and adds research agents (investment, financial analysis, competitors, market monitoring) and skills for earnings reviews, peer comparison and pre-DD scans.",
+      "version": "0.1.0",
+      "category": "finance",
+      "homepage": "https://www.clarifo.com/docs/mcp"
+    }
+  ]
+}

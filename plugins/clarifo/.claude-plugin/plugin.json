@@ -1,0 +1,14 @@
+{
+  "name": "clarifo",
+  "version": "0.1.0",
+  "description": "Source-cited financial research on US and Nordic listed companies, with ready-made research agents and skills.",
+  "author": {
+    "name": "Clarifo",
+    "email": "support@clarifo.com",
+    "url": "https://www.clarifo.com"
+  },
+  "homepage": "https://www.clarifo.com/docs/mcp",
+  "repository": "https://github.com/clarifo-com/clarifo-mcp",
+  "license": "MIT",
+  "keywords": ["finance", "sec-filings", "edgar", "nordic", "ifrs", "equity-research", "mcp"]
+}
